@@ -2612,24 +2612,25 @@ body {
   margin-top: 50px; /* Ubah angka ini sesuai keinginan Anda */
 }
 
-@media screen and (max-width: 800px) {
-  body {
-    transform: scale(0.75);
-	padding-top:1850px;
-  }
-}
 
-@media screen and (min-width: 801px) and (max-width: 1200px) {
+@media (max-width: 1200px) {
   body {
     transform: scale(1.0);
    padding-top:2350px;
   }
 }
 
-@media screen and (min-width: 1201px) {
+@media (min-width: 1201px) {
   body {
     transform: scale(1.5);
    padding-top:3000px;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    transform: scale(0.9);
+   padding-top:3500px;
   }
 }
 
