@@ -172,7 +172,8 @@
     // Function to trigger download of the canvas content as an image
     document.getElementById('save').addEventListener('click', function() {
       const link = document.createElement('a');
-      link.download = 'merged_image.png';
+	  d=new Date();
+      link.download = 'merged_image'+d.getTime()+'.png';
       link.href = canvas.toDataURL();
       link.click();
     });	
