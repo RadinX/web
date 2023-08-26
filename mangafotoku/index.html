@@ -2,6 +2,13 @@
 <html>
 <head>
   <title>Image Processor</title>
+  <style>
+    /* CSS to make buttons larger */
+    button {
+      font-size: 24px;
+      padding: 10px 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -10,6 +17,8 @@
   <button id="btn3">Upload Image 3</button>
   <button id="btn4">Upload Image 4</button>
   <button id="merge">Merge Images</button>
+  <button id="save">Save Image</button>
+
 
   <input type="file" id="file1" style="display: none;">
   <input type="file" id="file2" style="display: none;">
@@ -154,6 +163,15 @@
     document.getElementById("file4").addEventListener("change", function() {
       loadImage(this, 'img4', true);
     });
+	
+	
+    // Function to trigger download of the canvas content as an image
+    document.getElementById('save').addEventListener('click', function() {
+      const link = document.createElement('a');
+      link.download = 'merged_image.png';
+      link.href = canvas.toDataURL();
+      link.click();
+    });	
   </script>
 
 </body>
