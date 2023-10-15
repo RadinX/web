@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sliding Window Demo</title>
+    <style>
+	#calculation {
+		position: absolute;
+		top: 45vw; /* Adjust the value as needed */
+		width: 100%;
+		font-family: 'Courier New', monospace; /* This is a commonly used monospace font */
+		text-align: center;
+		font-size:2em; font-weight:bold;
+	}
+
+	#main-container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+
+	#container, #right-container {
+		position: relative;
+		width: 40vw;
+		height: 40vw;
+		overflow: hidden;
+	}
+
+	#container {
+		margin-right: 2vw; /* Add this line to create a gap */
+	}
+
+	.box {
+		position: absolute;
+		width: 2.5vw;
+		height: 2.5vw;
+		border: 1px solid black;
+		text-align: center;
+		line-height: 2.5vw;
+		font-size: 1.5vw;
+	}
+
+	.window {
+		position: absolute;
+		width: 7.5vw;
+		height: 7.5vw;
+		border: 3px solid red;
+		z-index: 10;
+		color: white;
+	}
+
+	.window-box {
+		position: absolute;
+		width: 2.5vw;
+		height: 2.5vw;
+		border: 1px solid red;
+		text-align: center;
+		line-height: 2.5vw;
+		font-size: 1.5vw;
+		color: red;
+	}    
+
+</style>
+</head>
+<body>
+	<div id="main-container">
+	  <div id="container"></div>
+	  <div id="right-container"></div>
+	</div>
+	<div id="window"></div>
+	<div id="calculation"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
